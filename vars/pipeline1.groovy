@@ -48,12 +48,12 @@ def cleaning() {
 def mailing() {
     post {
     success {
-        mail to: "harshithkgph27@gmail.com",
+        mail to: "shettyshrikanta@gamil.com",
              subject: "Jenkins Job Success",
              body: "The Jenkins job completed successfully."
     }
     failure {
-        mail to: "harshithkgph27@gmail.com",
+        mail to: "shettyshrikanta@gamil.com",
              subject: "Jenkins Job Failed",
              body: "The Jenkins job failed. Check the logs for details."
     }
