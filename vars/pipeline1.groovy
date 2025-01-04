@@ -33,19 +33,19 @@ def validateApp() {
         error("The app did not start correctly!")
     }
 }
-def wait() {
+def waiting() {
                 echo 'Waiting for 2 minutes...'
                 sleep(time: 2, unit: 'MINUTES')  // Wait for 2 minutes
 }
-def stop() {
+def stoping() {
     echo 'Gracefully stopping the Spring Boot application...'
     sh 'mvn spring-boot:stop'
 }
-def clean() {
+def cleaning() {
     echo 'Cleaning up...'
     sh 'pkill -f "mvn spring-boot:run" || true'
 }
-def mail() {
+def mailing() {
     post {
     success {
         mail to: "harshithkgph27@gmail.com",
