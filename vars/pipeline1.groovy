@@ -1,4 +1,4 @@
-def checkoutscm() {
+def checkscm() {
     echo 'Checking out code...'
     checkout scm
 }
@@ -34,15 +34,14 @@ def validateApp() {
     }
 }
 def waiting() {
-                echo 'Waiting for 2 minutes...'
-                sleep(time: 1, unit: 'MINUTES')  // Wait for 2 minutes
+        echo 'Waiting for 2 minutes...'
+        sleep(time: 2, unit: 'MINUTES')  // Wait for 2 minutes
 }
-def stoping() {
+def stop() {
     echo 'Gracefully stopping the Spring Boot application...'
     sh 'mvn spring-boot:stop'
 }
-def cleaning() {
+def clean() {
     echo 'Cleaning up...'
     sh 'pkill -f "mvn spring-boot:run" || true'
 }
-          
